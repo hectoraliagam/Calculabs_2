@@ -1,9 +1,21 @@
 # CALCULABS
 # by Hector Aliaga
 
-def print_main(title,options):
-    print("----------------------------------")
-    print(title)
+def print_title(title):
+    for text in title:
+        print(text)
+    return
+
+def print_menu(title,options):
+    for text in title:
+        print(text)
+    for option in options:
+        print(option)
+    return
+
+def print_menu_choise(title,options):
+    for text in title:
+        print(text)
     for option in options:
         print(option)
     choise = input("Inserta: ")
@@ -11,63 +23,128 @@ def print_main(title,options):
         return int(choise)
     return choise
 
-def main_opt():
+def menu_title():
+    title = [
+        "----------------------------------",
+        "|     BIENVENIDO A CALCULABS     |"
+    ]
+    return print_title(title)
+
+def version_title():
+    title = [
+        "----------------------------------",
+        "|         Versión: 2.3.10         |"
+    ]
+    return print_title(title)
+
+def exit_title():
+    title = [
+        "----------------------------------",
+        "|      Gracias por utilizar      |",
+        "|           CALCULABS            |",
+        "|       Vuelva pronto! :D        |",
+        "----------------------------------"
+    ]
+    return print_title(title)
+
+def menu_opt():
+    title = [
+        "|--------------------------------|",
+        "|    MENÚ PRINCIPAL:             |"
+    ]
     options = [
         "|    Salir/Menú ---------- 0     |",
         "|    Versión ------------- 1     |",
         "|    Menú Math ----------- 2     |",
         "----------------------------------"
     ]
-    return print_main("|    MENÚ PRINCIPAL:             |",options)
+    return print_menu_choise(title,options)
 
-def main_opt_math():
+# despues colocar funcion para version del programa
+
+def math_menu_opt():
+    title = [
+        "----------------------------------",
+        "|    MENÚ MATH:                  |"
+    ]
     options = [
-        "|    Volver/Menú Math ---- 0     |",
+        "|    Volver/Menú Actual -- 0     |",
         "|    Operaciones --------- 1     |",
-        "|    Promedio Arit ------- 2     |",
-        "|    Promedio Geom ------- 3     |",
-        "|    Promedio Armo ------- 4     |",
+        "|    Promedios  ---------- 2     |",
         "----------------------------------"
     ]
-    return print_main("|    MENÚ MATH:                  |",options)
+    return print_menu_choise(title,options)
 
-def print_exit_main(title_exit,options_exit):
-    print("----------------------------------")
-    print(title_exit)
-    for option in options_exit:
-        print(option)
-    return
+def average_menu_opt():
+    title = [
+        "----------------------------------",
+        "|    MENÚ PROMEDIOS:             |"
+    ]
+    options = [
+        "|    Volver/Menú Actual -- 0     |",
+        "|    Aritmético ---------- 1     |",
+        "|    Geométrico ---------- 2     |",
+        "|    Armónico ------------ 3     |",
+        "----------------------------------"
+    ]
+    return print_menu_choise(title,options)
 
-def opt_exit_main():
+def exit_menu_opt():
     while True:
+        title = [
+            "----------------------------------",
+            "|       ¿Desea continuar?        |"
+        ]
         options = [
+            "|--------------------------------|",
             "|    Salir --------------- s     |",
             "|    Menú Principal ------ p     |",
             "----------------------------------"
         ]
-        print_exit_main("|       ¿Desea continuar?        |",options)
-        opt_exit = input("Inserta: ")
-        if opt_exit == "s":
-            print("""---------------------------------------
-|  Gracias por utilizar el programa,  |
-|          vuelva pronto! :D          |
----------------------------------------""")
+        print_menu(title,options)
+        exit_opt = input("Inserta: ")
+        if exit_opt == "s":
+            exit_title()
             return -1
-        elif opt_exit == "p":
+        elif exit_opt == "p":
             return 0
 
-def opt_exit_main_math():
+def exit_math_menu_opt():
     while True:
+        title = [
+            "----------------------------------",
+            "|       ¿Desea continuar?        |"
+        ]
         options = [
+            "|--------------------------------|",
             "|    Volver -------------- v     |",
             "|    Menú Math ----------- m     |",
             "----------------------------------"
         ]
-        print_exit_main("|       ¿Desea continuar?        |",options)
-        opt_exit_math = input("Inserta: ")
-        if opt_exit_math == "v":
+        print_menu(title,options)
+        exit_math_opt = input("Inserta: ")
+        if exit_math_opt == "v":
             return -1
-        elif opt_exit_math == "m":
+        elif exit_math_opt == "m":
+            return 0
+
+def exit_average_menu_opt():
+    while True:
+        title = [
+            "----------------------------------",
+            "|       ¿Desea continuar?        |"
+        ]
+        options = [
+            "|--------------------------------|",
+            "|    Volver -------------- v     |",
+            "|    Menú Promedios ------ m     |",
+            "----------------------------------"
+        ]
+        print_menu(title,options)
+        exit_math_opt = input("Inserta: ")
+        if exit_math_opt == "v":
+            return -1
+        elif exit_math_opt == "m":
             return 0
 
 def get_number(prompt="Ingresa un número: "):
@@ -78,25 +155,23 @@ def get_number(prompt="Ingresa un número: "):
         except ValueError:
             continue
 
-def print_main_math(title_math,options_math):
-    print("----------------------------------")
-    print(title_math)
-    for option in options_math:
-        print(option)
-    return
-
-def operation():
+def perform_operation():
+    title = [
+        "----------------------------------",
+        "|          OPERACIONES           |"
+    ]
     options = [
-            "|    Suma -------------- '+'     |",
-            "|    Resta ------------- '-'     |",
-            "|    Multiplicación ---- '*'     |",
-            "|    División ---------- '/'     |",
-            "|    Potenciación ----- '**'     |",
-            "|    Radicación ------- '*/'     |",
-            "|    Terminar ---------- '='     |",
-            "----------------------------------"
-        ]
-    print_exit_main("|    Operaciones disponibles:    |",options)
+        "|--------------------------------|",
+        "|    Suma -------------- '+'     |",
+        "|    Resta ------------- '-'     |",
+        "|    Multiplicación ---- '*'     |",
+        "|    División ---------- '/'     |",
+        "|    Potenciación ----- '**'     |",
+        "|    Radicación ------- '*/'     |",
+        "|    Terminar ---------- '='     |",
+        "----------------------------------"
+    ]
+    print_menu(title,options)
     result = get_number()
     while True:
         operation = input("Ingresa una operación: ")
@@ -122,14 +197,20 @@ def operation():
             #result = eval(f"result {operation} num")
     print("----------------------------------")
     if result.is_integer():
-        return int(result)
-    return result
+        return f"|    == {int(result)}"
+    return f"|    == {result}"
 
 def arithmetic_average():
-    print("----------------------------------")
-    print("|      Promedio Aritmético:      |")
-    print("|    Terminar ---------- '='     |")
-    print("----------------------------------")
+    title = [
+        "----------------------------------",
+        "|      Promedio Aritmético       |",
+    ]
+    options = [
+        "|--------------------------------|",
+        "|    Terminar ---------- '='     |",
+        "----------------------------------"
+    ]
+    print_menu(title,options)
     add = get_number()
     num_of_nums = 1
     while True:
@@ -142,13 +223,19 @@ def arithmetic_average():
             num_of_nums += 1
         except ValueError:
             continue
-    return add/num_of_nums
+    return f"|    == {add/num_of_nums}"
 
 def geometric_average():
-    print("----------------------------------")
-    print("|      Promedio Geométrico:      |")
-    print("|    Terminar ---------- '='     |")
-    print("----------------------------------")
+    title = [
+        "----------------------------------",
+        "|      Promedio Geométrico       |",
+    ]
+    options = [
+        "|--------------------------------|",
+        "|    Terminar ---------- '='     |",
+        "----------------------------------"
+    ]
+    print_menu(title,options)
     mul = get_number()
     num_of_nums = 1
     while True:
@@ -161,13 +248,19 @@ def geometric_average():
             num_of_nums += 1
         except ValueError:
             continue
-    return mul**(1/num_of_nums)
+    return f"|    == {mul**(1/num_of_nums)}"
 
 def harmonic_average():
-    print("----------------------------------")
-    print("|       Promedio Armónico:       |")
-    print("|    Terminar ---------- '='     |")
-    print("----------------------------------")
+    title = [
+        "----------------------------------",
+        "|       Promedio Armónico        |",
+    ]
+    options = [
+        "|--------------------------------|",
+        "|    Terminar ---------- '='     |",
+        "----------------------------------"
+    ]
+    print_menu(title,options)
     add = 1/get_number()
     num_of_nums = 1
     while True:
@@ -180,46 +273,49 @@ def harmonic_average():
             num_of_nums += 1
         except ValueError:
             continue
-    return num_of_nums/add
+    return f"|    == {num_of_nums/add}"
+
+# Main program
 
 while True:
-    print("----------------------------------")
-    print("|     BIENVENIDO A CALCULABS     |")
-    opt = main_opt()
+    menu_title()
+    opt = menu_opt()
     if opt == 0:
-        if opt_exit_main() == -1:
+        if exit_menu_opt() == -1:
             break
     elif opt == 1:
-        print("----------------------------------")
-        print("|         Versión: 2.2.5         |")
-        if opt_exit_main() == -1:
+        version_title()
+        if exit_menu_opt() == -1:
             break
     elif opt == 2:
         while True:
-            opt_math = main_opt_math()
+            opt_math = math_menu_opt()
             if opt_math == 0:
-                if opt_exit_main_math() == -1:
+                if exit_math_menu_opt() == -1:
                     break
             elif opt_math == -1:
                 break
             elif opt_math == 1:
-                
-                #print(f"|    Salir --------------- s     |")
-                print(f"|    == {operation()}")
-                if opt_exit_main_math() == -1:
+                print(perform_operation())
+                if exit_math_menu_opt() == -1:
                     break
             elif opt_math == 2:
-                
-                print(f"|    == {arithmetic_average()}")
-                if opt_exit_main_math() == -1:
-                    break
-            elif opt_math == 3:
-                
-                print(f"|   == {geometric_average()}")
-                if opt_exit_main_math() == -1:
-                    break
-            elif opt_math == 4:
-                
-                print(f"|   == {harmonic_average()}")
-                if opt_exit_main_math() == -1:
-                    break
+                while True:
+                    opt_average = average_menu_opt()
+                    if opt_average == 0:
+                        if exit_average_menu_opt() == -1:
+                            break
+                    elif opt_average == -1:
+                        break
+                    elif opt_average == 1:
+                        print(arithmetic_average())
+                        if exit_average_menu_opt() == -1:
+                            break
+                    elif opt_average == 2:
+                        print(geometric_average())
+                        if exit_average_menu_opt() == -1:
+                            break
+                    elif opt_average == 3:
+                        print(harmonic_average())
+                        if exit_average_menu_opt() == -1:
+                            break

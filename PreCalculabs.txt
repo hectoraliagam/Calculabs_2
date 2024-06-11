@@ -1,0 +1,188 @@
+#Funciones de Calculabs2
+print_menu
+print_exit_menu
+print_math_menu
+menu_opt
+math_menu_opt
+exit_menu_opt
+exit_math_menu_opt
+get_number
+perform_operation
+arithmetic_average
+geometric_average
+harmonic_average
+
+
+# Contenido de Calculabs2
+
+----------------------------------
+|                                |
+|--------------------------------|
+
+BIENVENIDO A CALCULABS
+
+Versión: 2.3.10
+
+Gracias por utilizar
+CALCULABS
+Vuelva pronto!
+
+MENÚ PRINCIPAL:
+Salir/Menú ---------- 0
+Versión ------------- 1
+Menú Math ----------- 2
+
+MENÚ MATH:
+Volver/Menú Actual -- 0
+Operaciones --------- 1
+Promedios  ---------- 2
+
+MENÚ PROMEDIOS:
+Volver/Menú Actual -- 0
+Aritmético ---------- 1
+Geométrico ---------- 2
+Armónico ------------ 3
+
+¿Desea continuar?
+Salir --------------- s
+Menú Principal ------ p
+
+¿Desea continuar?
+Volver -------------- v
+Menú Math ----------- m
+
+¿Desea continuar?
+Volver -------------- v
+Menú Promedios ------ m
+
+OPERACIONES
+Suma -------------- '+'
+Resta ------------- '-'
+Multiplicación ---- '*'
+División ---------- '/'
+Potenciación ----- '**'
+Radicación ------- '*/'
+Terminar ---------- '='
+
+Promedio Aritmético
+Terminar ---------- '='
+
+Promedio Geométrico
+Terminar ---------- '='
+
+Promedio Armónico
+Terminar ---------- '='
+
+
+
+
+
+# PreCalculabs3
+# Creación del cuerpo
+
+MENÚ PRINCIPAL:
+Salir --------------- 0
+Versión ------------- 9
+Calculadora --------- 8
+Álgebra ------------- 7
+Geometría ----------- 6
+Conversor de 
+Unidades     -------- 5
+Finanzas ------------ 4
+Salud --------------- 3
+Otros --------------- 2
+Configuración ------- 1
+
+
+    Salir --------------- s
+    Menú Principal ------ p
+
+        Gracias por utilizar
+        CALCULABS
+        Vuelva pronto! :D
+
+
+    Versión: 3.0.0
+
+        Volver --------------- v
+
+
+    CALCULADORA:
+    Volver -------------- 0
+    Panel de Teclas ----- 9
+    Calcular ------------ 8
+
+        Volver -------------- s
+        Calculadora --------- c
+
+
+        PANEL DE TECLAS:
+        Volver -------------- 0
+        Operadores básicos -- 9
+        Funciones 
+        matemáticas 
+        básicas ------------- 8
+        Funciones 
+        trigonométricas ----- 7
+        Constantes 
+        matemáticas --------- 6
+        Funciones 
+        adicionales --------- 5
+
+
+            Operadores básicos:
+
+            Adición ----------- (+)
+            Sustracción ------- (-)
+            Multiplicación ---- (*)
+            División ---------- (/)
+
+                Volver --------------- v
+
+            Funciones matemáticas 
+            básicas:
+
+            Potencia ---------- (^)
+            Raíz cuadrada -- (sqrt)
+            Logaritmo en 
+            base 10 --------- (log)
+            Logaritmo 
+            natural ---------- (ln)
+            Exponencial ----- (exp)
+
+                Volver --------------- v
+
+            Funciones 
+            trigonométricas:
+
+            Seno ------------ (sin)
+            Coseno ---------- (cos)
+            Tangente -------- (tan)
+            Sen inverso ---- (asin)
+            Cos inverso ---- (acos)
+            Tan inverso ---- (atan)
+
+                Volver --------------- v
+
+            Constantes matemáticas:
+
+            Pi --------------- (pi)
+            Euler ------------- (e)
+
+                Volver --------------- v
+
+            Funciones adicionales:
+
+            Valor absoluto -- (abs)
+            Factorial ------ (fact)
+
+                Volver --------------- v
+
+        CALCULAR:
+        Terminar ---------- '='
+
+                Volver --------------- v
+                Calcular ------------- c
+
+
+
